@@ -4,14 +4,15 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
 type ProjectProps = (typeof projectsData)[number];
+import { LuChevronRight } from "react-icons/lu";
 
 export default function Project({
   title,
   type,
   description,
   tags,
+  github = "",
   imageUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,7 +25,7 @@ export default function Project({
           <p className="break-keep mt-1 leading-normal text-gray-700 dark:text-white/70 ">
             {description}
           </p>
-          <ul className="flex flex-wrap justify-self-end mt-4 gap-2 ">
+          <ul className="flex flex-wrap justify-self-end mt-4 gap-2 group-hover:hidden">
             {tags.map((tag, index) => (
               <li
                 className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
@@ -34,6 +35,22 @@ export default function Project({
               </li>
             ))}
           </ul>
+          <div className="hidden items-center gap-4 font-medium mt-4 group-hover:flex">
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                className="group bg-white px-4 py-3 flex  items-center rounded-lg outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+              >
+                Github
+                <LuChevronRight />
+              </a>
+            )}
+            <a className="group bg-white px-4 py-3 flex  items-center rounded-lg outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10">
+              Blog
+              <LuChevronRight />
+            </a>
+          </div>
         </div>
         {imageUrl && (
           <Image
