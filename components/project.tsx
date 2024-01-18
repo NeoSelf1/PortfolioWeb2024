@@ -4,8 +4,9 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
-type ProjectProps = (typeof projectsData)[number];
 import { LuChevronRight } from "react-icons/lu";
+
+type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
   title,

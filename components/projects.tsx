@@ -13,7 +13,7 @@ export default function Projects() {
   const defaultCl =
     "group px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 shadow-sm hover:scale-110 active:scale-105 transition cursor-pointer ";
 
-  const handleClick = (num: number) => {
+  const handleClick = (num: any) => {
     let tempArr = [...filter];
     if (num == 99) {
       tempArr = tempArr.map((item) => (item = true));
@@ -36,13 +36,13 @@ export default function Projects() {
       className="mt-28 mb-28 w-full px-16 scroll-mt-28"
     >
       <SectionHeading>My projects</SectionHeading>
-      <motion.div
+      <div
         className="flex sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium my-8"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
+        // initial={{ opacity: 0, y: 100 }}
+        // animate={{ opacity: 1, y: 0 }}
+        // transition={{
+        //   delay: 0.1,
+        // }}
       >
         <a
           className={`${defaultCl} ${
@@ -94,7 +94,7 @@ export default function Projects() {
         >
           etc
         </a>
-      </motion.div>
+      </div>
       <div className="flex-wrap flex item-center gap-4 font-light justify-center ">
         <AnimatePresence>
           {projectsData.map(

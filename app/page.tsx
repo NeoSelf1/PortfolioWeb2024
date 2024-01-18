@@ -22,7 +22,7 @@ export default function Home() {
           <>
             <motion.div
               key="custom"
-              className="fixed inset-0 flex justify-end items-start p-8"
+              className="fixed top-8  right-8"
               {...slideAnimation("right")}
             >
               <button
