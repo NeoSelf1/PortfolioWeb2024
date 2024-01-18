@@ -12,7 +12,7 @@ export default function Project({
   type,
   description,
   tags,
-  github = "",
+  github,
   imageUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);

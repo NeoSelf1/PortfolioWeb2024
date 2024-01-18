@@ -183,6 +183,7 @@ export const projectsData = [
       "채용공고 플랫폼인 KITs의 웹과 모바일 앱의 디자인을 총괄하여 진행하였습니다.",
     tags: ["Figma"],
     imageUrl: kits,
+    github: null,
   },
   {
     title: "FITNEE",
@@ -220,6 +221,7 @@ export const projectsData = [
       "피아노 연주를 보조하는 VisionOS 앱을 디자인하였으며, Unity를 통해 프로토타입 앱을 만들어 새로운 UX의 효율을 검증하였습니다.",
     tags: ["Unity", "C#", "Figma", "After Effect"],
     imageUrl: realitas,
+    github: null,
   },
   {
     title: "Emoti.(WIP)",
@@ -228,6 +230,7 @@ export const projectsData = [
       "일기를 작성 후 제출하면, 작성된 일기의 내용에 맞춰 섬 3D모델이 발전하는 웹앱을 현재 개발 중에 있습니다.",
     tags: ["Next js", "Three.js", "ChatGPT api"],
     imageUrl: null,
+    github: null,
   },
 ] as const;
 

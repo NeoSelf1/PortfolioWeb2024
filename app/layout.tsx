@@ -1,11 +1,12 @@
 import Header from "@/components/header";
 import "./globals.css";
 import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/components/footer";
+
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { cls, notoSansKr, roboto } from "@/lib/fonts";
+import RecoilContextProvider from "@/context/recoil-context";
 
 export const metadata = {
   title: "NeoSelf",
@@ -30,10 +31,12 @@ export default function RootLayout({
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
-            {children}
-            <Toaster position="top-right" />
-            <ThemeSwitch />
+            <RecoilContextProvider>
+              <Header />
+              {children}
+              {/* <Toaster position="top-right" /> */}
+              <ThemeSwitch />
+            </RecoilContextProvider>
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>

@@ -13,7 +13,7 @@ export default function Projects() {
   const defaultCl =
     "group px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 shadow-sm hover:scale-110 active:scale-105 transition cursor-pointer ";
 
-  const handleClick = (num: any) => {
+  const handleClick = (num: number) => {
     let tempArr = [...filter];
     if (num == 99) {
       tempArr = tempArr.map((item) => (item = true));
