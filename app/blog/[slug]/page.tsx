@@ -1,30 +1,7 @@
 import Image from "next/image";
-// import PostUser from "@/components/postUser/postUser";
 import { Suspense } from "react";
 import { getPost } from "@/lib/data";
 import PostUser from "@/components/postUser";
-
-// FETCH DATA WITH AN API
-// const getData = async (slug:string) => {
-//   const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
-
-//   if (!res.ok) {
-//     throw new Error("Something went wrong");
-//   }
-
-//   return res.json();
-// };
-
-// export const generateMetadata = async ({ params }) => {
-//   const { slug } = params;
-
-//   const post = await getPost(slug);
-
-//   return {
-//     title: post.title,
-//     description: post.desc,
-//   };
-// };
 
 //먼저 slug로부터 post 데이터를 가져와야하기 때문에, const metadata를 바로 정의할 수 없다. 대신 함수로 이를 가져올 수 있다.
 export const generateMetadata = async ({ params }: any) => {
