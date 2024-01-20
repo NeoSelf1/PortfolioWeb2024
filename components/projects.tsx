@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
@@ -36,14 +36,7 @@ export default function Projects() {
       className="mt-28 mb-28 w-full px-16 scroll-mt-28"
     >
       <SectionHeading>My projects</SectionHeading>
-      <div
-        className="flex sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium my-8"
-        // initial={{ opacity: 0, y: 100 }}
-        // animate={{ opacity: 1, y: 0 }}
-        // transition={{
-        //   delay: 0.1,
-        // }}
-      >
+      <div className="flex sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium my-8">
         <a
           className={`${defaultCl} ${
             filter.filter((item) => item == false).length == 0

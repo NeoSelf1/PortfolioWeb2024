@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 export const validateString = (
   value: unknown,
   maxLength: number
@@ -23,4 +25,24 @@ export const getErrorMessage = (error: unknown): string => {
   }
 
   return message;
+};
+
+type ConnectionProps = {
+  isConnected?: any;
+};
+const connection: ConnectionProps = {};
+
+export const connectToDb = async () => {
+  try {
+    if (connection.isConnected) {
+      console.log("Using existing connection");
+      return;
+    }
+    const db = await mongoose.connect(process.env.MONGO as unknown as string);
+    connection.isConnected = db.connections[0].readyState;
+    console.log("hello", db.connections[0].readyState);
+  } catch (e) {
+    console.log(e);
+    // throw new Error(e?);
+  }
 };

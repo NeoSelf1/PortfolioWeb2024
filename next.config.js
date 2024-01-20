@@ -4,9 +4,17 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
+        hostname: "images.pexels.com",
       },
     ],
+  },
+  webpack: (config) => {
+    config.resolve.fallback = {
+      "mongodb-client-encryption": false,
+      aws4: false,
+    };
+
+    return config;
   },
   experimental: {
     serverActions: true,
