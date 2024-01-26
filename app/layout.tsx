@@ -3,7 +3,6 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
-import { Toaster } from "react-hot-toast";
 import { cls, notoSansKr, roboto } from "@/lib/fonts";
 import RecoilContextProvider from "@/context/recoil-context";
 
@@ -23,7 +22,7 @@ export default function RootLayout({
         className={`${cls(
           notoSansKr.className,
           roboto.variable
-        )} bg-gray-50 dark:bg-[#091A0D] text-gray-950 relative pt-28 sm:pt-36  dark:text-gray-50 dark:text-opacity-90 px-8`}
+        )} transition bg-gray-50 dark:bg-[#0b180f] text-gray-950 relative pt-28 sm:pt-36  dark:text-gray-50 dark:text-opacity-90 px-8`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

@@ -2,9 +2,8 @@
 
 import { RecoilRoot, atom } from "recoil";
 
-//recoil state 생성
-export const isBlogState = atom({
-  key: "isBlog",
+export const isKoreanState = atom({
+  key: "isKorean",
   default: false,
 });
 export default function RecoilContextProvider({

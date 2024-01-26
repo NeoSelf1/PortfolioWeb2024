@@ -10,10 +10,13 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import { useRecoilState } from "recoil";
+import { isKoreanState } from "@/context/recoil-context";
 
 export default function Experience() {
-  const { ref, inView } = useSectionInView("Experience", 0.2);
+  const { ref } = useSectionInView("Experience", 0.2);
   const { theme } = useTheme();
+  const [isKorean, setIsKorean] = useRecoilState(isKoreanState);
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 sm:mb-24">
@@ -44,11 +47,15 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className=" font-semibold capitalize">{item.title}</h3>
+              <h3 className=" font-semibold capitalize">
+                {isKorean ? item.title[0] : item.title[1]}
+              </h3>
               <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-2 !font-light text-gray-700 dark:text-white/75 break-keep">
-                {item.description}
-              </p>
+              {item.description && (
+                <p className="!mt-2 !font-light text-gray-700 dark:text-white/75 break-keep">
+                  {isKorean ? item.description[0] : item.description[1]}
+                </p>
+              )}
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

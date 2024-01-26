@@ -19,18 +19,11 @@ export default function Home() {
         <Header />
         <motion.div
           className={`transition delay-150 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-[#277332]/40 dark:bg-[#4A96D9]
-            
             `}
         />
         <motion.div
-          className={`transition delay-150 bg-[#F2E3D5] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#277332]
-       `}
+          className={`transition delay-150 bg-[#F2E3D5] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#277332]`}
         />
-        <motion.div
-          key="custom"
-          className="fixed top-8  right-8"
-          {...slideAnimation("right")}
-        ></motion.div>
         <Intro />
         <SectionDivider />
         <About />
