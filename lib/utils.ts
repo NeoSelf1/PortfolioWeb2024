@@ -43,6 +43,6 @@ export const connectToDb = async () => {
     console.log("hello", db.connections[0].readyState);
   } catch (e) {
     console.log(e);
-    // throw new Error(e?);
+    throw new Error("Connecting to DB Failed");
   }
 };

@@ -23,6 +23,15 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/experience.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "../components/experience.jsx",
+    "app/api/blog/route.js",
+    "app/api/blog/route.js",
+    "app/api/blog/[slug]/route.js"
+  ],
   "exclude": ["node_modules"]
 }

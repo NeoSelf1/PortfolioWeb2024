@@ -9,14 +9,11 @@ import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import { motion } from "framer-motion";
-import { isBlogState } from "@/context/recoil-context";
 import { AnimatePresence } from "framer-motion";
-import { useRecoilState } from "recoil";
 import { slideAnimation } from "@/lib/motion";
 import Link from "next/link";
 
 export default function Home() {
-  // const [isBlog, setIsBlog] = useRecoilState(isBlogState);
   return (
     <main className="flex flex-col items-center px-4">
       <AnimatePresence>
