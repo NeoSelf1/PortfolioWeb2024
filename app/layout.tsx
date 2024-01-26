@@ -6,7 +6,6 @@ import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { cls, notoSansKr, roboto } from "@/lib/fonts";
 import RecoilContextProvider from "@/context/recoil-context";
-import NavBar from "@/components/NavBar";
 
 export const metadata = {
   title: { default: "Neoself Portfolio", template: "%s | Neoself" },
