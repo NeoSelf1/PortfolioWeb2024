@@ -5,6 +5,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { LuChevronRight } from "react-icons/lu";
+import Link from "next/link";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -15,12 +16,13 @@ export default function Project({
   tags,
   github,
   imageUrl,
+  links,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   return (
     <motion.div ref={ref} className="group mb-3 sm:mb-8" exit={{ opacity: 0 }}>
-      <section className="bg-gray-100 w-[34rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+      <section className="bg-gray-100 w-[33rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         <div className="pt-4 pb-4 px-5 sm:pl-8 sm:pt-8 sm:max-w-[64%] flex flex-col h-full">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="break-keep mt-1 leading-normal text-gray-700 dark:text-white/70 ">
@@ -47,10 +49,16 @@ export default function Project({
                 <LuChevronRight />
               </a>
             )}
-            <a className="group bg-white px-4 py-3 flex  items-center rounded-lg outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10">
-              Blog
-              <LuChevronRight />
-            </a>
+            {links?.map((item: any) => (
+              <Link
+                href={item.link}
+                target="_blank"
+                className="text-sm group bg-white px-4 py-3 flex  items-center rounded-lg outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+              >
+                {item.title}
+                <LuChevronRight />
+              </Link>
+            ))}
           </div>
         </div>
         {imageUrl && (

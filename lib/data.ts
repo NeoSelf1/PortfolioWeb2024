@@ -234,6 +234,12 @@ export const projectsData = [
     tags: ["Figma"],
     imageUrl: kits,
     github: null,
+    links: [
+      {
+        title: "피그마",
+        link: "https://www.figma.com/file/VTKK0rjMt52zzyGyiDri40/Portfolio-KITS?type=design&node-id=0%3A1&mode=design&t=qOQRCJa9Ssv1Pv2O-1",
+      },
+    ],
   },
   {
     title: "FITNEE",
@@ -249,6 +255,7 @@ export const projectsData = [
     ],
     imageUrl: fitnee,
     github: "https://github.com/FITNEE/FITNEE_Client",
+    links: [{ title: "소개 영상", link: "https://youtu.be/jx1jj89UvNc" }],
   },
   {
     title: "PAWITH",
@@ -272,6 +279,10 @@ export const projectsData = [
     tags: ["Unity", "C#", "Figma", "After Effect"],
     imageUrl: realitas,
     github: null,
+    links: [
+      { title: "시연 영상", link: "https://youtu.be/pAoHnSKRhY0" },
+      { title: "프로토타입 영상", link: "https://youtu.be/kOYHOO5wNBw" },
+    ],
   },
   {
     title: "Emoti.(WIP)",
@@ -295,7 +306,7 @@ export const skillsData = [
   "Adobe Illustrator",
   "React",
   "Next.js",
-  "Git",
+  "Github",
   "Tailwind",
   "Framer Motion",
 ] as const;

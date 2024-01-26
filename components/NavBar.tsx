@@ -2,6 +2,7 @@ import { auth, signIn } from "@/lib/auth";
 import Link from "next/link";
 import React from "react";
 import { signOut } from "next-auth/react";
+import { login } from "@/lib/actions";
 
 const NavBar = async () => {
   const session = await auth();
@@ -15,12 +16,11 @@ const NavBar = async () => {
           </button>
         </form>
       ) : (
-        <></>
-        // <form action={signIn}>
-        //   <button className="bg-gray-200 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow">
-        //     Login
-        //   </button>
-        // </form>
+        <form action={login}>
+          <button className="bg-gray-200 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow">
+            Login
+          </button>
+        </form>
       )}
     </>
   );

@@ -29,9 +29,7 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <RecoilContextProvider>
-              <NavBar />
               {children}
-              {/* <Toaster position="top-right" /> */}
               <ThemeSwitch />
             </RecoilContextProvider>
           </ActiveSectionContextProvider>

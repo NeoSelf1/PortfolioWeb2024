@@ -11,7 +11,6 @@ import Skills from "@/components/skills";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { slideAnimation } from "@/lib/motion";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -31,16 +30,7 @@ export default function Home() {
           key="custom"
           className="fixed top-8  right-8"
           {...slideAnimation("right")}
-        >
-          <Link href="/blog">
-            <button
-              // onClick={() => setIsBlog(true)}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow"
-            >
-              블로그
-            </button>
-          </Link>
-        </motion.div>
+        ></motion.div>
         <Intro />
         <SectionDivider />
         <About />

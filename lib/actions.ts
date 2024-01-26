@@ -32,17 +32,17 @@ export const deletePost = async (formData: any) => {
   }
 };
 
-export const register = async (formData: any) => {
+export const register = async (prevState: any, formData: any) => {
   const { username, email, password, img, passwordRepeat } =
     Object.fromEntries(formData);
   if (password !== passwordRepeat) {
-    return "Passwords do not match!";
+    return { error: "Passwords do not match!" };
   }
   try {
     connectToDb();
     const user = await User.findOne({ username });
     if (user) {
-      return "Username already exists";
+      return { error: "Username already exists" };
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -55,13 +55,13 @@ export const register = async (formData: any) => {
     });
     await newUser.save();
     console.log("saved to db");
+    return { success: true };
   } catch (e) {
     console.log(e);
     return { error: "Something went wrong!" };
   }
 };
 export const handleGithubLogin = async () => {
-  console.log("asdf");
   await signIn("github");
 };
 
@@ -70,7 +70,11 @@ export const login = async (prevState: any, formData: any) => {
 
   try {
     await signIn("credentials", { username, password });
-  } catch (e) {
-    console.log(e);
+  } catch (e: any) {
+    console.log(e.message);
+    if (e.message.includes("CredentialsSignin")) {
+      return { error: "Invalid username or password" };
+    }
+    throw e;
   }
 };
