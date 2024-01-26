@@ -183,7 +183,12 @@ export const projectsData = [
     description: `스마투스코리아에서 개발자로 6개월간 근무하며, 정적인 React 웹사이트를 개발했습니다.`,
     tags: ["React", "HTML", "CSS"],
     imageUrl: smartooth,
-    github: "https://github.com/NeoSelf1/SmartoothHomePage",
+    links: [
+      {
+        title: "Github",
+        link: "https://github.com/NeoSelf1/SmartoothHomePage",
+      },
+    ],
   },
   {
     title: "FirstScene",
@@ -192,7 +197,12 @@ export const projectsData = [
       "퍼스트씬이라는 영상제작기업의 브랜딩을 소개하는 홈페이지를 개발하였습니다.",
     tags: ["React", "HTML", "CSS"],
     imageUrl: firstScene,
-    github: "https://github.com/NeoSelf1/firstscene",
+    links: [
+      {
+        title: "Github",
+        link: "https://github.com/NeoSelf1/firstscene",
+      },
+    ],
   },
   {
     title: "악보 인식 프로그램",
@@ -201,7 +211,12 @@ export const projectsData = [
       "OpenCV-python을 활용하여 삽입된 악보 이미지 내의 계이름들을 계산하고 출력하는 프로그램을 개발하였습니다.",
     tags: ["Python", "OpenCV"],
     imageUrl: noteRecognition,
-    github: "https://github.com/NeoSelf1/NoteRecognition",
+    links: [
+      {
+        title: "Github",
+        link: "https://github.com/NeoSelf1/NoteRecognition",
+      },
+    ],
   },
   {
     title: "Portfolio Web",
@@ -215,7 +230,12 @@ export const projectsData = [
       "React Native-cli",
     ],
     imageUrl: portfolio2022,
-    github: "https://github.com/NeoSelf1/PortfolioWeb",
+    links: [
+      {
+        title: "Github",
+        link: "https://github.com/NeoSelf1/PortfolioWeb",
+      },
+    ],
   },
   {
     title: "Planote",
@@ -224,7 +244,12 @@ export const projectsData = [
       "개발하였던 악보 인식 OpenCV 프로그램을 OpenCV.js로 변환한 후, GraphQL, Prisma를 사용해 계이름이 출력된 악보를 확인할 수 있는 모바일 앱을 1인 개발하였습니다.",
     tags: ["Python", "OpenCV.js", "GraphQL", "Prisma"],
     imageUrl: planote,
-    github: "https://github.com/NeoSelf1/Planote",
+    links: [
+      {
+        title: "Github",
+        link: "https://github.com/NeoSelf1/Planote",
+      },
+    ],
   },
   {
     title: "KITs",
@@ -233,10 +258,9 @@ export const projectsData = [
       "채용공고 플랫폼인 KITs의 웹과 모바일 앱의 디자인을 총괄하여 진행하였습니다.",
     tags: ["Figma"],
     imageUrl: kits,
-    github: null,
     links: [
       {
-        title: "피그마",
+        title: "Figma",
         link: "https://www.figma.com/file/VTKK0rjMt52zzyGyiDri40/Portfolio-KITS?type=design&node-id=0%3A1&mode=design&t=qOQRCJa9Ssv1Pv2O-1",
       },
     ],
@@ -254,8 +278,14 @@ export const projectsData = [
       "Expo",
     ],
     imageUrl: fitnee,
-    github: "https://github.com/FITNEE/FITNEE_Client",
-    links: [{ title: "소개 영상", link: "https://youtu.be/jx1jj89UvNc" }],
+    links: [
+      {
+        title: "Github",
+        link: "https://github.com/FITNEE/FITNEE_Client",
+      },
+      ,
+      { title: "소개 영상", link: "https://youtu.be/jx1jj89UvNc" },
+    ],
   },
   {
     title: "PAWITH",
@@ -269,7 +299,12 @@ export const projectsData = [
       "React Native-cli",
     ],
     imageUrl: pawith,
-    github: "https://github.com/TEAM-SAMSION/Frontend",
+    links: [
+      {
+        title: "Github",
+        link: "https://github.com/TEAM-SAMSION/Frontend",
+      },
+    ],
   },
   {
     title: "REALITAS",
@@ -278,7 +313,6 @@ export const projectsData = [
       "피아노 연주를 보조하는 VisionOS 앱을 디자인하였으며, Unity를 통해 프로토타입 앱을 만들어 새로운 UX의 효율을 검증하였습니다.",
     tags: ["Unity", "C#", "Figma", "After Effect"],
     imageUrl: realitas,
-    github: null,
     links: [
       { title: "시연 영상", link: "https://youtu.be/pAoHnSKRhY0" },
       { title: "프로토타입 영상", link: "https://youtu.be/kOYHOO5wNBw" },
@@ -291,7 +325,7 @@ export const projectsData = [
       "일기를 작성 후 제출하면, 작성된 일기의 내용에 맞춰 섬 3D모델이 발전하는 웹앱을 현재 개발 중에 있습니다.",
     tags: ["Next js", "Three.js", "ChatGPT api"],
     imageUrl: null,
-    github: null,
+    links: null,
   },
 ] as const;
 

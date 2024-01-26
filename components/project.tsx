@@ -14,7 +14,6 @@ export default function Project({
   type,
   description,
   tags,
-  github,
   imageUrl,
   links,
 }: ProjectProps) {
@@ -39,16 +38,6 @@ export default function Project({
             ))}
           </ul>
           <div className="hidden items-center gap-4 font-medium mt-4 group-hover:flex">
-            {github && (
-              <a
-                href={github}
-                target="_blank"
-                className="group bg-white px-4 py-3 flex  items-center rounded-lg outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-              >
-                Github
-                <LuChevronRight />
-              </a>
-            )}
             {links?.map((item: any, id: number) => (
               <Link
                 key={id}
