@@ -1,4 +1,3 @@
-import NavBar from "@/components/NavBar";
 import { PostCard } from "@/components/postcard";
 
 export const metadata = {
@@ -22,7 +21,6 @@ const BlogPage = async () => {
 
   return (
     <div className="container mx-auto py-8">
-      <NavBar />
       <h1 className="text-3xl font-bold m-4 ">블로그s 글 목록</h1>
       <div className="flex-wrap flex gap-4 w-full">
         {posts.map((post: any, id: number) => (
