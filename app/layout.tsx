@@ -8,7 +8,7 @@ import RecoilContextProvider from "@/context/recoil-context";
 
 export const metadata = {
   title: { default: "Neoself Portfolio", template: "%s | Neoself" },
-  description: "항상 새로운 UX를 탐구하고자 하는 프론트엔드 개발자입니다.",
+  description: "항상 새로운 UX를 탐구하고자 하는 풀스택 개발자입니다.",
 };
 
 export default function RootLayout({

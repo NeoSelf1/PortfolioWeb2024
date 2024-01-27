@@ -4,7 +4,7 @@ import { RecoilRoot, atom } from "recoil";
 
 export const isKoreanState = atom({
   key: "isKorean",
-  default: false,
+  default: true,
 });
 export default function RecoilContextProvider({
   children,

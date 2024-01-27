@@ -10,7 +10,6 @@ import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
-import { slideAnimation } from "@/lib/motion";
 
 export default function Home() {
   return (
