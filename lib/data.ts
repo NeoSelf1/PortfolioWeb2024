@@ -410,6 +410,7 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
+  "MongoDB",
   "React Native",
   "Figma",
   "Adobe After Effects",
