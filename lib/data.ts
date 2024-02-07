@@ -1,6 +1,5 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import {
   LuGraduationCap,
   LuSchool2,
@@ -17,6 +16,7 @@ import kits from "@/assets/kits.png";
 import portfolio2022 from "@/assets/portfolio2022.png";
 import smartooth from "@/assets/smartooth.png";
 import realitas from "@/assets/realitas.png";
+import ibt from "@/assets/IBT.png";
 import { Post, User } from "./models";
 import { connectToDb } from "./utils";
 import { unstable_noStore as noStore } from "next/cache";
@@ -234,6 +234,22 @@ export const projectsData = [
       {
         title: "Github",
         link: "https://github.com/NeoSelf1/SmartoothHomePage",
+      },
+    ],
+  },
+  {
+    title: "IBT",
+    type: 0,
+    description: [
+      `카탈로그와 뉴스글의 관리가 가능한 동적인 Next.js 프레임워크의 웹사이트를 개발했습니다.`,
+      "Developed a website for the dynamic Next.js framework that enables the management of catalogs and newsletters.",
+    ],
+    tags: ["Next.js", "Typescript", "Node.js", "MongoDB", "TailwindCSS"],
+    imageUrl: ibt,
+    links: [
+      {
+        title: "Github",
+        link: "https://github.com/NeoSelf1/IBT_Homepage",
       },
     ],
   },
