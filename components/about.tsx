@@ -37,9 +37,7 @@ export default function About() {
           있는 개발자가 되고자, 2년간 쌓아온 시각 디자이너의 커리어를 과감히
           버리고 컴퓨터공학을 복수전공하게 되었습니다. 그 덕분에, 저는 현재
           새로운 기술이 등장할때마다 바로 도전할 수 있도록 CS지식을 얻을 수
-          있었습니다. 제 핵심 스택은 React-native를 바탕으로 하는{" "}
-          <span className="font-bold">Javascript와 Typescript</span>이며, 현재는
-          iOS의 매력에 빠져
+          있었습니다. 제 핵심 스택은 React-native이며, 현재는 iOS의 매력에 빠져
           <span className="font-bold"> VisionOS를 비롯한 Swift언어</span>를
           독학중에 있습니다.
         </p>
