@@ -32,7 +32,7 @@ export default function Intro() {
               <br />
               저는 새로운 것을 두려워하지않는
               <br />
-              <span className="font-bold">풀스택 개발자</span>
+              <span className="font-bold">개발자</span>
               입니다.
               <br />
             </motion.h1>
