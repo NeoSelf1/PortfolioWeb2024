@@ -396,10 +396,10 @@ export const projectsData = [
     title: "Emoti.(WIP)",
     type: 0,
     description: [
-      "일기를 작성 후 제출하면, 작성된 일기의 내용에 맞춰 섬 3D모델이 발전하는 웹앱을 현재 개발 중에 있습니다.",
+      "일기를 작성 후 제출하면, 작성된 일기의 내용에 맞춰 섬 3D모델이 발전하는 VisionOS 앱을 현재 개발 중에 있습니다.",
       "Currently developing a web app that develops island 3D models according to the contents of the diary when you write and submit it.",
     ],
-    tags: ["Next js", "Three.js", "ChatGPT api", "MongoDB"],
+    tags: ["Swift", "Blender", "SwiftUi", "MongoDB"],
     imageUrl: null,
     links: null,
   },
