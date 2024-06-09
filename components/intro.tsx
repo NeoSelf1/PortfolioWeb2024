@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Tistory from "../assets/tistory.svg";
 import React from "react";
 import { motion } from "framer-motion";
 import profile from "../assets/profileImg.jpeg";
-import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useRecoilState } from "recoil";
@@ -102,12 +102,16 @@ export default function Intro() {
         }}
       >
         <a
-          className="flex items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 focus:scale-110 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10"
+          className="flex items-center gap-2 py-3 transition rounded-full outline-none cursor-pointer group px-7 focus:scale-110 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10"
           href="https://neoself.tistory.com"
           target="_blank"
         >
+          <Image
+            alt={"Tistory"}
+            src={Tistory}
+            className="w-8 transition opacity-60"
+          />
           {isKorean ? "개발 블로그" : "Development blog"}
-          <HiDownload className="transition opacity-60 group-hover:translate-y-1" />
         </a>
 
         <a
