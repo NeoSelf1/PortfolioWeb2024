@@ -218,6 +218,15 @@ export const experiencesData = [
     icon: React.createElement(LuSmartphone),
     date: "2023/11",
   },
+  {
+    title: ["코코넛사일로(주) 인턴", "Coconutsilo Co. Intern"],
+    description: [
+      "4개월 간, 플랫폼개발기획파트 인턴 직무를 수행하며, React Native 라이브러리의 네이티브 모듈화 진행. 한 앱의 개발, 출시와 유지보수를 담당",
+      "Performed an internship in the platform development planning part for 4 months taking in charge of native modularization of the React Native library. Took in charge of development, release, and maintenance of an app",
+    ],
+    icon: React.createElement(CgWorkAlt),
+    date: "2024/3-6",
+  },
 ] as const;
 
 export const projectsData = [
@@ -406,18 +415,16 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "MongoDB",
+  "Swift",
+  "SwiftUi",
   "React Native",
-  "Figma",
-  "Adobe After Effects",
-  "Adobe Illustrator",
   "React",
   "Next.js",
-  "Github",
   "Tailwind",
-  "Framer Motion",
+  "TypeScript",
+  "Reality Composer Pro",
+  "MongoDB",
+  "Figma",
+  "Adobe Illustrator",
+  "Adobe After Effects",
 ] as const;
