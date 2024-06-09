@@ -103,10 +103,10 @@ export default function Intro() {
       >
         <a
           className="flex items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 focus:scale-110 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10"
-          href="/CV.pdf"
-          download
+          href="https://neoself.tistory.com"
+          target="_blank"
         >
-          {isKorean ? "ICT 인턴십 이력서 다운로드" : "Download ICT Resume"}
+          {isKorean ? "개발 블로그" : "Development blog"}
           <HiDownload className="transition opacity-60 group-hover:translate-y-1" />
         </a>
 
